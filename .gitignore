@@ -1,0 +1,13 @@
+# put files/folders we want to ignore
+
+content_libraries/
+*.csv
+
+# Common Python/Jupyter cruft
+
+pycache/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
