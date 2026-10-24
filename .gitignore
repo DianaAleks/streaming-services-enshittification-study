@@ -11,3 +11,9 @@ pycache/
 .venv/
 venv/
 .env
+
+# IMDb data files
+Name_basics.tsv
+Title_basics.tsv
+Title_ratings.tsv
+Title_variations.tsv
