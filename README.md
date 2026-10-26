@@ -26,7 +26,6 @@ Analyse each platform/year separately for:
 - Release year
 - Title origin
 - IMDb score and votes
-- Bayesian IMDb score
 
 ---
 
@@ -55,53 +54,35 @@ Analyse how the available catalogue changes between **2022–2026**:
 - Country/origin distribution
 - Changes in catalogue composition
 
-An influence function may be used to account for the effect of **release year/title age**.
-
 This allows us to assess whether changes in price are accompanied by changes in the **amount and type of content available**.
 
 ---
 
 # 3. Content Quality - Q2
 
-Content quality will be measured using a **Bayesian weighted IMDb score**.
+Content quality will be measured by these factors:
 
-## Bayesian IMDb Score
+- **Average IMDb rating**
+  Calculate the mean and median IMDb score for each service and snapshot year.
 
-[
-WR = \frac{v}{v+m}R + \frac{m}{v+m}C
-]
+  Question: Does the average rated quality of the catalogue improve or decline over time?
 
-Where:
+- **Share of highly rated titles**
+  Define a threshold, such as IMDb score of 7 or above, and calculate the percentage of titles meeting it.
 
-- **WR** = Bayesian weighted rating
-- **R** = IMDb rating
-- **v** = number of IMDb votes
-- **m** = minimum vote threshold
-- **C** = average IMDb rating
+  Question: Does the service offer a greater proportion of highly rated content each year?
 
-The Bayesian approach reduces the influence of titles with very few votes.
+- **IMDb vote counts**
+  Examine the distribution of vote counts and the number of titles of the service receiving substantial audience engagement.
 
-### Vote Threshold
+  Question: Are more titles attracting large audiences, or are most titles receiving relatively little attention?
 
-The minimum vote threshold (**m**) will be determined by analysing the distribution of IMDb votes.
+- **Quality of newer versus older content**
+  Compare IMDb ratings by release period or between recent and older titles.
 
-We will examine:
-
-- Distribution of votes across titles
-- Rating stability at different vote levels
-- The appropriate threshold for reliable comparisons
-- Titles with very low/no votes
+  Question: Are services adding recent titles that are also well rated?
 
 Low IMDb votes will be treated as a **potential indicator of limited audience interest**, but not as a direct measure of viewing.
-
-### Content Quality vs. Audience Interest
-
-Using **Tudum viewing data**, compare:
-
-- **What people watch** → viewing performance
-- **What is considered good** → Bayesian weighted IMDb score
-
-This will show whether **consumer interest aligns with perceived content quality**.
 
 ### IMDb Score Over Time
 
@@ -112,7 +93,6 @@ Compare:
 - IMDb score in 2022 vs. 2026
 - IMDb score in 2023 vs. 2026
 - Number of IMDb votes across the years
-- Bayesian weighted IMDb score across the years
 
 This allows us to determine whether the quality of the same content changes over time, rather than simply comparing different catalogues each year.
 
