@@ -39,3 +39,9 @@ Each topic gets its own sentiment. "Love the shows but far too expensive" is `c+
 5. **Only code what is stated.** Do not infer a topic the review does not mention.
 6. **Short generic reviews** ("good", "bad app") are `u` with the matching sentiment.
 7. Use at most 3 codes. If more topics appear, keep the three most prominent.
+8. **Each topic appears at most once per review.** If a review is both positive and negative about the same topic, use the dominant sentiment, or `0` if it is balanced.
+9. **Campaign reviews about a specific production.** Reviews that attack one named title or production (for example the 2023 Cleopatra docudrama, "falsifying Egyptian history", "blackwashing") are `m-`, even when they do not name the title.
+10. **Objections to a service's cultural or political content** that name no specific title (religious, LGBTQ or other values complaints) are `o-`.
+11. `x` is for empty, emoji-only, gibberish or non-English text only. A short but readable English review ("good app", "too expensive") is annotated normally.
+
+*Rules 8-11 were added after the first annotation run (6,000 reviews), where agents applied rules 8-9 inconsistently.*
